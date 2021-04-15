@@ -38,7 +38,9 @@ jobs:
   steps:
    - run:
       name: Run Software Emulation
-      command: ./sw_emu.sh 
+      command: |
+       pwd
+       ./sw_emu.sh 
  
 workflows:
  complete-build-test:

@@ -28,6 +28,10 @@ jobs:
       name: Run Hardware Emulation Build
       command: Emulation-HW/build.sh
       type: hw-emulation
+   - run:
+      name: Run Hardware Build
+      command: Hardware/build.sh
+      type: Hardware
  test-sw-emulation:
   runner: AWS-runner
   depends:

@@ -40,6 +40,7 @@ jobs:
       name: Run Software Emulation
       command: |
        pwd
+       ls
        ./sw_emu.sh 
  
 workflows:

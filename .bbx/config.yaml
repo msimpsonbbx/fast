@@ -3,7 +3,7 @@ runners:
   image: ubuntu-vitis-2020-1
 
 jobs:   
- build-fast:
+ build-SW-emu:
   runner: AWS-runner
   type:
    build: software
@@ -17,41 +17,40 @@ jobs:
    - run:
       name: Run Software Emulation Build
       command: Emulation-SW/build.sh
-      type: sw-emulation      
- test-sw-emulation:
+      type: sw-emulation     
+ build-HW-emu:
   runner: AWS-runner
-  depends:
-   - build-fast
   type:
-   test: sw-emulation
+   build: software
   input: 
    artifact: 
-    - build-fast
     - platform/zcu104-firmware
+    - bbx/petalinux-sysroot
+    - bbx/petalinux-firmware
+    - bbx/vitis-libraries
   steps:
-   - run:
-      name: Download files
-      command: |
-       git clone https://github.com/mwijeyasinghebbx/test_images
-       mv test_images/* /tools/Xilinx/Vitis/2020.1/platforms/xilinx_zcu104_base_202010_1/sw/xilinx_zcu104_base_202010_1/xrt/image/
-      type: miscellaneous  
    - run:
       name: Run Hardware Emulation Build
       command: Emulation-HW/build.sh
-      type: hw-emulation
+      type: hw-emulation  
+ build-HW:
+  runner: AWS-runner
+  type:
+   build: software
+  input: 
+   artifact: 
+    - platform/zcu104-firmware
+    - bbx/petalinux-sysroot
+    - bbx/petalinux-firmware
+    - bbx/vitis-libraries
+  steps:
    - run:
-      name: Run Hardware Build
+      name: Build HW
       command: Hardware/build.sh
-      type: Hardware
-   - run:
-      name: Run Software Emulation
-      command: |
-       pwd
-       ls
-       ./sw_emu.sh 
- 
+      type: Hardware 
 workflows:
  complete-build-test:
   jobs:
-   - build-fast
-   - test-sw-emulation
+   - build-SW-emu
+   - build-HW-emu
+   - build-HW

@@ -70,6 +70,11 @@ clean-package:
 
 clean: clean-host clean-accelerators clean-package
 
+ifeq ($(MAKECMDGOALS),incremental)
+.PHONY: krnl_fast.xclbin
+.PHONY: krnl_fast.build/fast_accel.xo
+endif
+
 .PHONY: incremental
 incremental: all
 

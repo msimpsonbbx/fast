@@ -21,7 +21,7 @@ jobs:
  build-HW-emu:
   runner: AWS-runner
   type:
-   build: software
+   build: hw-emulation
   input: 
    artifact: 
     - platform/zcu104-firmware
@@ -36,7 +36,7 @@ jobs:
  build-HW:
   runner: AWS-runner
   type:
-   build: software
+   build: hardware
   input: 
    artifact: 
     - platform/zcu104-firmware

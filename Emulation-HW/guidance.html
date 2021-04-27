@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xrcserver v.2020.1.1 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Apr 16 10:44:47 2021</td></tr>
+<tr><td><b>Date</b></td><td>Mon Apr 19 17:47:50 2021</td></tr>
 <tr><td><b>Host</b></td><td>work2-System-Product-Name running 64-bit Ubuntu 18.04.5 LTS</td></tr>
 <tr><td><b>Command</b></td><td>Vitis IDE session Emulation-HW</td></tr>
 </table></center><br>
@@ -3418,9 +3418,9 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#PERFORMANCE CHECKS MET">4 PERFORMANCE CHECKS MET</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 19
+<pre>Violations found: 0
 </pre>
-<pre>Rule Specs Violated: 3
+<pre>Rule Specs Violated: 0
 </pre>
 <pre>Rules Met: 1
 </pre>
@@ -3438,223 +3438,6 @@ window.onload = function () { addSorting(); }
 <th align="left">Categories</th>
 <th align="left" width="350">Details</th>
 <th align="left" width="380">Resolution</th>
-</tr>
-<tr>
-<td align="left">1</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: <a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/features/xf_fast.hpp#line=920">xf_fast.hpp</a>
-</td>
-<td align="left"><a href="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/214-114.html">See here for more help on vitis_hls 214-114 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">Throughput</td>
-<td align="left">warning</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Dataflow form checks found 1 issue(s) in file /tools/Xilinx/Vitis/2020.1/workspace/fast/src/xf_fast_accel.cpp
-</td>
-<td align="left"><a href="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-471.html">See here for more help on vitis_hls 200-471 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.fast_accel.Interface</td>
-<td align="left">Burst read of variable length and bit width 8 has been inferred on port 'gmem0' (<a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1003">xf_structs.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.fast_accel.Interface</td>
-<td align="left">Burst write of variable length and bit width 8 has been inferred on port 'gmem1' (<a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1305">xf_structs.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left">Kernel</td>
-<td align="left">warning</td>
-<td align="left">Medium</td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.fast_accel.Kernel</td>
-<td align="left">Estimated clock period (5.04375ns) exceeds the target (target clock period: 6.667ns, clock uncertainty: 1.8ns, effective delay budget: 4.867ns).
-</td>
-<td align="left"><a href="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-871.html">See here for more help on vitis_hls 200-871 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left">Kernel</td>
-<td align="left">warning</td>
-<td align="left">Medium</td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.fast_accel.Kernel</td>
-<td align="left">The critical path in module 'AxiStream2MatStream' consists of the following:	'phi' operation ('j') with incoming values : ('j', <a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1061">xf_structs.hpp</a>-><a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1115">xf_structs.hpp</a>) [27]  (0 ns)
-	'icmp' operation ('bLast', <a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1043">xf_structs.hpp</a>-><a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1115">xf_structs.hpp</a>) [38]  (0.991 ns)
-	'select' operation ('select_ln1057', <a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1057">xf_structs.hpp</a>-><a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1115">xf_structs.hpp</a>) [48]  (0 ns)
-	'sub' operation ('sub_ln1057', <a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1057">xf_structs.hpp</a>-><a href="file:///tools/Xilinx/Vitis/2020.1/workspace/fast/libs/xf_opencv/L1/include/common/xf_structs.hpp#line=1115">xf_structs.hpp</a>) [50]  (1.02 ns)
-	'icmp' operation ('icmp_ln674_1') [52]  (0.991 ns)
-	'select' operation ('select_ln674_3') [59]  (0 ns)
-	'sub' operation ('sub_ln674_7') [62]  (0.797 ns)
-	blocking operation 1.25 ns on control path)
-
-</td>
-<td align="left"><a href="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1016.html">See here for more help on vitis_hls 200-1016 guidance.</a></td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 1.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">11</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 1.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">12</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 11.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">13</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 1.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">14</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">15</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">16</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">18</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.fast_accel.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td align="left">Kernel</td>
-<td align="left">advisory</td>
-<td align="left">Medium</td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.fast_accel.Kernel</td>
-<td align="left">**** Estimated Fmax: 198.27 MHz
-</td>
-<td align="left"></td>
 </tr>
 </table>
 <br>
@@ -3675,7 +3458,7 @@ window.onload = function () { addSorting(); }
 <th align="left" width="320">Rule Description</th>
 </tr>
 <tr>
-<td align="left">20</td>
+<td align="left">1</td>
 <td align="left">SYSLINK-1</td>
 <td align="left">system_link Top Level BD Creation</td>
 <td align="left"></td>
